@@ -423,30 +423,31 @@ body.dark-mode .close-settings:hover {
 }
 
 .settings-btn {
-  background: none; 
-  background-image: url("/assets/settings-img.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 32px;
-  height: 32px;
+  background-color: var(--keyboard-bg); 
+  color: var(--keyboard-text);        
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 6px 12px;                 
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
   position: absolute;
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
-  border: none;
-  cursor: pointer;
   opacity: 0.85;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, background-color 0.2s;
   z-index: 100;
 }
 
 .settings-btn:hover {
-  opacity: 1; 
+  opacity: 1;
+  background-color: var(--keyboard-hover);
 }
 
 body.dark-mode .settings-btn {
-  filter: none; 
+  background-color: var(--keyboard-bg);
+  color: var(--keyboard-text);
 }
 
 @keyframes fadeIn {
@@ -513,4 +514,5 @@ body.dark-mode .settings-btn {
     left: 3px;
   }
 }
+
 
