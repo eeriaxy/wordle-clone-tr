@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wordle Clone TR</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="start-screen" aria-hidden="false">
+      <div class="start-container" role="dialog" aria-labelledby="start-title">
+        <h2 id="start-title">Hoş geldiniz!</h2>
+        <p>Oynamak istediğiniz modu seçin:</p>
+        <div class="modes">
+          <div class="mode-container">
+            <button class="mode-btn" data-mode="classic">Klasik</button>
+            <div class="hint-wrapper">
+              <div class="hide-img">?</div>
+              <div class="hide">
+                5 harfli gizli kelimeyi 6 denemede bulmaya çalış.
+              </div>
+            </div>
+          </div>
+
+          <div class="mode-container">
+            <button class="mode-btn" data-mode="easy">Kolay</button>
+            <div class="hint-wrapper">
+              <div class="hide-img">?</div>
+              <div class="hide">
+                Verilen ipucu ile 5 harfli gizli kelimeyi 6 denemede bulmaya
+                çalış.
+              </div>
+            </div>
+          </div>
+
+          <div class="mode-container">
+            <button class="mode-btn" data-mode="hard-7">Zor</button>
+            <div class="hint-wrapper">
+              <div class="hide-img">?</div>
+              <div class="hide">
+                7 harfli gizli kelimeyi 6 denemede bulmaya çalış.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="container">
+      <div id="game">
+        <header>
+          <label class="theme-switch">
+            <span class="switch-indicator"></span>
+          </label>
+          <h1 class="title">WORDLE CLONE</h1>
+          <button id="settings-btn" class="settings-btn"></button>
+        </header>
+        <div id="settings-panel" class="settings-panel hidden">
+          <h2>Ayarlar</h2>
+
+          <div class="setting-group">
+            <label>Mod:</label>
+            <select id="mode-select">
+              <option value="classic">Klasik Mod</option>
+              <option value="easy">Kolay Mod</option>
+              <option value="hard-7">Zor Mod</option>
+            </select>
+          </div>
+
+          <button id="close-settings" class="close-settings">Tamam</button>
+        </div>
+        <div id="alert">
+          <div class="alert-box">
+            <p id="alert-text"></p>
+            <button id="alert-btn">Tamam</button>
+          </div>
+        </div>
+
+        <div id="board-container">
+          <div id="board"></div>
+        </div>
+
+        <div id="keyboard-container">
+          <div class="keyboard-row">
+            <button data-key="e">e</button>
+            <button data-key="r">r</button>
+            <button data-key="t">t</button>
+            <button data-key="y">y</button>
+            <button data-key="u">u</button>
+            <button data-key="ı">ı</button>
+            <button data-key="o">o</button>
+            <button data-key="p">p</button>
+            <button data-key="ğ">ğ</button>
+            <button data-key="ü">ü</button>
+            <button data-key="del" class="special-button">SİL</button>
+          </div>
+          <div class="keyboard-row">
+            <div class="spacer-half"></div>
+            <button data-key="a">a</button>
+            <button data-key="s">s</button>
+            <button data-key="d">d</button>
+            <button data-key="f">f</button>
+            <button data-key="g">g</button>
+            <button data-key="h">h</button>
+            <button data-key="j">j</button>
+            <button data-key="k">k</button>
+            <button data-key="l">l</button>
+            <button data-key="ş">ş</button>
+            <button data-key="i">İ</button>
+            <div class="spacer-half"></div>
+          </div>
+          <div class="keyboard-row">
+            <button data-key="z">z</button>
+            <button data-key="c">c</button>
+            <button data-key="v">v</button>
+            <button data-key="b">b</button>
+            <button data-key="n">n</button>
+            <button data-key="m">m</button>
+            <button data-key="ö">ö</button>
+            <button data-key="ç">ç</button>
+            <button data-key="enter" class="special-button">ONAY</button>
+          </div>
+        </div>
+        <button id="new-word-btn">Yeni Kelime</button>
+      </div>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
