@@ -424,7 +424,7 @@ body.dark-mode .close-settings:hover {
 
 .settings-btn {
   background: none; 
-  background-image: url("assets/settings-img.png");
+  background-image: url("/assets/settings-img.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -513,3 +513,4 @@ body.dark-mode .settings-btn {
     left: 3px;
   }
 }
+
