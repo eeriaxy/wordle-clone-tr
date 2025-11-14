@@ -82,6 +82,7 @@ html, body {
 .start-container h2 {
   margin-bottom: 8px;
 }
+
 .start-container p {
   margin-bottom: 16px;
   color: #555;
@@ -173,6 +174,7 @@ header {
 body.dark-mode header {
   border-color: #555;
 }
+
 body.dark-mode .title {
   color: var(--text-color);
 }
@@ -514,5 +516,6 @@ body.dark-mode .settings-btn {
     left: 3px;
   }
 }
+
 
 
